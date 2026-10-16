@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Website Của Tôi</h1>
+            <p>Chào mừng bạn đến với trang web</p>
+        </header>
+
+        <nav class="navigation">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Tin tức</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <main class="content">
+            <h2>Nội dung chính</h2>
+            <p>
+                Đây là khu vực nội dung chính của trang web.
+                CSS Grid giúp sắp xếp các thành phần theo hàng
+                và cột một cách dễ dàng.
+            </p>
+
+            <h3>Responsive với CSS Grid</h3>
+            <p>
+                Giao diện có thể tự động thay đổi bố cục
+                để phù hợp với màn hình máy tính và điện thoại.
+            </p>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Tin tức</h2>
+            <p>Thông tin số 1: Công nghệ mới.</p>
+            <p>Thông tin số 2: Học lập trình web.</p>
+            <p>Thông tin số 3: Thiết kế giao diện.</p>
+        </aside>
+
+        <footer class="footer">
+            <p>© 2026 - Website Của Tôi</p>
+        </footer>
+
+    </div>
+</body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "content sidebar"
+        "footer footer";
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.navigation {
+    grid-area: navigation;
+    background-color: #007bff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    grid-area: content;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.content h3 {
+    margin-top: 15px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+.sidebar p {
+    margin-top: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "navigation"
+            "content"
+            "sidebar"
+            "footer";
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+</html>
