@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Development Template</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        /* Thanh điều hướng */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #111;
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            gap: 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-list li a:hover {
+            color: #55d6be;
+        }
+
+        .rightNav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #search {
+            width: 150px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #159b80;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #10745f;
+        }
+
+        /* Phần giới thiệu đầu tiên */
+        .firstsection {
+            background-color: #d8f3dc;
+            padding: 60px 8%;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+        }
+
+        .box-main {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .firstHalf {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Phần C Programming */
+        .secondsection {
+            background-color: #dbeafe;
+            padding: 60px 8%;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+        }
+
+        .secondHalf {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* Phần Java */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 30px;
+            min-height: 350px;
+        }
+
+        .section-Left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            flex: 1;
+        }
+
+        .thumbnail {
+            flex: 0 0 35%;
+            text-align: center;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 15px;
+            border: 3px solid #ddd;
+        }
+
+        .text-big {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #12372a;
+        }
+
+        .text-small {
+            font-size: 17px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Chân trang */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* Giao diện điện thoại */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-list {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .rightNav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            #search {
+                width: 65%;
+            }
+
+            .firstsection,
+            .secondsection {
+                padding: 40px 7%;
+            }
+
+            .section,
+            .section-Left {
+                flex-direction: column;
+                padding: 40px 7%;
+                gap: 20px;
+            }
+
+            .text-big {
+                font-size: 27px;
+            }
+
+            .text-small {
+                font-size: 16px;
+            }
+
+            .thumbnail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <div class="logo">WEB DEV</div>
+
+        <ul class="nav-list">
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#course">Courses</a></li>
+        </ul>
+
+        <form class="rightNav" id="searchForm">
+            <input type="text" id="search" placeholder="Tìm kiếm...">
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </nav>
+
+    <!-- Phần 1: Web Technology -->
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">Web Technology</h1>
+
+                <p class="text-small">
+                    HTML stands for HyperText Markup Language. It is used to
+                    create the structure of web pages. HTML defines headings,
+                    paragraphs, images, links and other elements displayed
+                    by a web browser. Combined with CSS and JavaScript,
+                    HTML helps developers build modern and interactive websites.
+                </p>
+
+                <p class="text-small">
+                    CSS is used to style web pages, including colors, fonts,
+                    spacing and layout. Understanding HTML and CSS is an
+                    important first step in web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần 2: C Programming -->
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="secondHalf">
+                <h1 class="text-big" id="program">C Programming</h1>
+
+                <p class="text-small">
+                    C is a procedural programming language developed by
+                    Dennis Ritchie. It is widely used in system programming,
+                    operating systems and embedded applications.
+                </p>
+
+                <p class="text-small">
+                    C provides useful features such as variables, loops,
+                    functions, arrays and pointers. Learning C helps students
+                    understand fundamental programming concepts and
+                    problem-solving techniques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần 3: Java -->
+    <section class="section section-Left" id="course">
+        <div class="paras">
+            <h1 class="text-big">Java Programming</h1>
+
+            <p class="text-small">
+                Java is a popular object-oriented programming language.
+                Java source code is compiled into bytecode, which runs
+                on the Java Virtual Machine (JVM). This allows Java
+                applications to run on different operating systems
+                that support the JVM.
+            </p>
+
+            <p class="text-small">
+                Java is commonly used to develop web applications,
+                desktop software, enterprise systems and Android apps.
+                It is a useful language for students who want to learn
+                object-oriented programming.
+            </p>
+        </div>
+
+        <div class="thumbnail">
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                alt="Laptop used for programming">
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>Copyright &copy; 2026 - All rights reserved</p>
+        <p>Simple Web Development Template</p>
+    </footer>
+
+    <script>
+        // Xử lý tìm kiếm đơn giản
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var keyword = document.getElementById("search").value.toLowerCase().trim();
+
+            if (keyword === "") {
+                alert("Vui lòng nhập từ khóa cần tìm!");
+                return;
+            }
+
+            if (keyword.includes("web") || keyword.includes("html")) {
+                document.getElementById("web").scrollIntoView();
+            } else if (keyword.includes("c programming") || keyword === "c") {
+                document.getElementById("program").scrollIntoView();
+            } else if (keyword.includes("java") || keyword.includes("course")) {
+                document.getElementById("course").scrollIntoView();
+            } else {
+                alert("Không tìm thấy nội dung phù hợp!");
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
