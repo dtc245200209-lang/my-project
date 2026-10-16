@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với display</title>
+    <style>
+        /* Đặt font chữ và căn giữa toàn bộ trang */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Định dạng thanh điều hướng dùng inline-block để nằm ngang */
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #007BFF; /* Thêm hiệu ứng đổi màu khi di chuột */
+        }
+
+        /* Định dạng khoảng cách cho khối chứa 3 cột */
+        section {
+            margin-top: 30px;
+        }
+
+        /* Định dạng 3 cột bằng inline-block */
+        .box {
+            display: inline-block;
+            width: 30%; /* Chiếm 30% chiều rộng màn hình */
+            padding: 20px;
+            background-color: lightblue;
+            margin: 10px;
+            box-sizing: border-box; /* Đảm bảo padding không làm vỡ kích thước 30% */
+            border-radius: 5px; /* Bo góc nhẹ cho đẹp */
+        }
+
+        /* Định dạng chân trang */
+        footer {
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bố cục trang web với display</h1>
+    
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+    
+    <section>
+        <div class="box">Cột 1</div>
+        <div class="box">Cột 2</div>
+        <div class="box">Cột 3</div>
+    </section>
+    
+    <footer>
+        <p>Bản quyền &copy; 2026</p>
+    </footer>
+</body>
+</html>
