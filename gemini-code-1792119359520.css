@@ -1,0 +1,72 @@
+/* 1. Bộ chọn Element (Phần tử): Đổi màu nền của toàn bộ trang */
+body {
+    background-color: #f0f8ff; /* Màu xanh nhạt AliceBlue */
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+/* 2. Bộ chọn ID: Căn giữa và định dạng tiêu đề chính */
+#main-title {
+    text-align: center;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+/* 3. Bộ chọn Class (Lớp): Định dạng đoạn văn mô tả */
+.intro-text {
+    font-size: 18px;
+    color: #34495e;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* 4. Bộ chọn Grouping (Nhóm) & Element: Định dạng khung chứa danh sách */
+ul.hobby-list {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 60%;
+    margin: 20px auto; /* Căn giữa danh sách */
+    list-style-type: square;
+}
+
+.hobby-item {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 5. Bộ chọn Pseudo-class (Lớp giả): Định dạng màu sắc khác nhau cho từng mục trong danh sách */
+.hobby-item:nth-child(1) {
+    color: #e74c3c; /* Màu đỏ cho mục đầu tiên */
+}
+
+.hobby-item:nth-child(2) {
+    color: #27ae60; /* Màu xanh lá cho mục thứ hai */
+}
+
+.hobby-item:nth-child(3) {
+    color: #8e44ad; /* Màu tím cho mục thứ ba */
+}
+
+/* Định dạng cơ bản cho nút bấm */
+button.action-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+/* 6. Bộ chọn Pseudo-class :hover: Tạo hiệu ứng khi di chuột vào nút bấm */
+button.action-btn:hover {
+    background-color: #1abc9c; /* Đổi sang màu xanh ngọc khi hover */
+    box-shadow: 0 4px 10px rgba(26, 188, 156, 0.4);
+}
