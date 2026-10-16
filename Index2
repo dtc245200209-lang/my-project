@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Basis</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border: 2px solid #333;
+            background-color: white;
+        }
+
+        .item {
+            padding: 15px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid #3498db;
+            min-width: 0;
+        }
+
+        /* Ví dụ 1: flex-basis với px */
+        .px .item1 {
+            flex-basis: 200px;
+        }
+
+        .px .item2 {
+            flex-basis: 100px;
+        }
+
+        .px .item3 {
+            flex-basis: 150px;
+        }
+
+        /* Ví dụ 2: flex-direction column */
+        .column {
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .column .item {
+            flex-basis: 100px;
+            background-color: lightgreen;
+        }
+
+        /* Ví dụ 3: flex-basis với % */
+        .percent .item {
+            flex-basis: 50%;
+            background-color: lightcoral;
+        }
+
+        /* Ví dụ 4: flex-basis kết hợp flex-grow */
+        .grow {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .grow .item {
+            flex-basis: 100px;
+            background-color: lightskyblue;
+        }
+
+        .grow .item1,
+        .grow .item3 {
+            flex-grow: 1;
+        }
+
+        .grow .item2 {
+            flex-grow: 2;
+            background-color: orange;
+        }
+
+        /* Ví dụ 5: auto */
+        .auto .item {
+            flex-basis: auto;
+            width: 150px;
+            background-color: lightyellow;
+        }
+
+        /* Ví dụ 6: initial */
+        .initial .item {
+            flex-basis: initial;
+            width: 150px;
+            background-color: plum;
+        }
+
+        /* Ví dụ 7: inherit */
+        .inherit-parent {
+            display: flex;
+            flex-basis: 200px;
+            gap: 10px;
+            border: 2px dashed #555;
+            padding: 10px;
+        }
+
+        .inherit-parent .item {
+            flex-basis: inherit;
+            background-color: lightpink;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                margin: 10px;
+            }
+
+            .container {
+                gap: 5px;
+            }
+
+            .item {
+                padding: 10px;
+                overflow-wrap: anywhere;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thực hành CSS Flex Basis</h1>
+
+    <h2>1. flex-basis với px</h2>
+    <p>Item 1: 200px, Item 2: 100px, Item 3: 150px.</p>
+
+    <div class="container px">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>2. flex-direction: column</h2>
+    <p>flex-basis: 100px xác định kích thước cơ sở theo chiều dọc.</p>
+
+    <div class="container column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>3. flex-basis với %</h2>
+    <p>Mỗi item có kích thước cơ sở bằng 50% chiều rộng container.</p>
+
+    <div class="container percent">
+        <div class="item">Item 1 - 50%</div>
+        <div class="item">Item 2 - 50%</div>
+    </div>
+
+    <h2>4. flex-basis kết hợp flex-grow</h2>
+    <p>Các item có basis 100px. Item 2 nhận thêm không gian gấp đôi.</p>
+
+    <div class="container grow">
+        <div class="item item1">Grow 1</div>
+        <div class="item item2">Grow 2</div>
+        <div class="item item3">Grow 1</div>
+    </div>
+
+    <h2>5. flex-basis: auto</h2>
+    <p>Sử dụng kích thước width đã thiết lập.</p>
+
+    <div class="container auto">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>6. flex-basis: initial</h2>
+    <p>Đưa flex-basis về giá trị mặc định auto.</p>
+
+    <div class="container initial">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>7. flex-basis: inherit</h2>
+    <p>Item kế thừa giá trị flex-basis từ phần tử cha.</p>
+
+    <div class="inherit-parent">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+
+</body>
+</html>
