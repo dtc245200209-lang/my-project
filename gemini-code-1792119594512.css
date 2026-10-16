@@ -1,0 +1,38 @@
+/* Thiết lập màu nền cho toàn bộ trang web */
+body {
+    background-color: #e0f7fa; /* Màu xanh lơ nhạt */
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Căn giữa tiêu đề và đoạn văn giới thiệu */
+h1, p {
+    text-align: center;
+}
+
+/* Thiết lập ảnh nền và căn giữa nội dung cho khối div */
+.important-content {
+    /* Đặt ảnh nền (bạn có thể thay link ảnh khác nếu muốn) */
+    background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1000&q=80');
+    
+    /* Điều chỉnh ảnh nền phủ kín khối div và nằm ở chính giữa */
+    background-size: cover;
+    background-position: center;
+    
+    /* Căn giữa nội dung văn bản bên trong */
+    text-align: center;
+    
+    /* Đổi màu chữ thành trắng và thêm bóng để dễ đọc trên nền ảnh */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    
+    /* Căn lề và tạo khoảng trống bên trong khối div */
+    margin: 40px auto;
+    padding: 60px 20px;
+    max-width: 700px;
+    
+    /* Bo tròn các góc để giao diện mềm mại hơn */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
