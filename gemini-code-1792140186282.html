@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn tạo Fixed Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Định dạng cho thanh menu cố định */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /* Cố định thanh menu */
+            top: 0;          /* Đặt ở vị trí trên cùng của trình duyệt */
+            width: 100%;     /* Chiều rộng trải dài 100% màn hình */
+            z-index: 1000;   /* Đảm bảo menu luôn nổi lên trên cùng, không bị phần tử khác đè lên */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Hiệu ứng khi di chuột vào các thẻ a trong menu */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Định dạng cho phần nội dung chính */
+        .main {
+            padding: 16px;
+            margin-top: 50px; /* Tạo khoảng trống phía trên để tránh bị Fixed Menu che khuất nội dung */
+            height: 1500px;   /* Chiều cao lớn để ép trình duyệt hiển thị thanh cuộn dọc */
+            background-color: #f4f4f9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Khối Menu điều hướng -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- Khối Nội dung chính -->
+    <div class="main">
+        <h1>Fixed Top Menu</h1>
+        <h2>Cuộn trang để thấy hiệu ứng</h2>
+        <h2>Thanh điều hướng (menu) sẽ luôn giữ cố định ở trên cùng của trang khi cuộn</h2>
+        <p>Hãy thử cuộn thanh cuộn dọc của trình duyệt xuống dưới, bạn sẽ thấy nội dung này bị cuộn trôi đi nhưng thanh menu màu đen phía trên vẫn nằm im một chỗ.</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+    </div>
+
+</body>
+</html>
