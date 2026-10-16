@@ -1,0 +1,182 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive bằng Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #333;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        .nav a:hover {
+            background-color: #007bff;
+        }
+
+        /* Khu vực nội dung */
+        .main-container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 3;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive trên Mobile */
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 20px 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Website Responsive</h1>
+            <p>Bố cục trang web bằng CSS Flexbox</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#news">Tin tức</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <div class="main-container">
+
+            <main class="content" id="home">
+                <h2>Main Content - Nội dung chính</h2>
+
+                <p>
+                    Đây là khu vực nội dung chính của website.
+                    CSS Flexbox giúp sắp xếp các thành phần linh hoạt
+                    và dễ dàng thay đổi theo kích thước màn hình.
+                </p>
+
+                <h3 id="about">Giới thiệu</h3>
+                <p>
+                    Website sử dụng HTML và CSS để xây dựng bố cục
+                    responsive trên máy tính và điện thoại.
+                </p>
+
+                <h3 id="news">Tin tức</h3>
+                <p>
+                    Khi màn hình nhỏ hơn hoặc bằng 768px,
+                    nội dung chính và Sidebar sẽ xếp theo chiều dọc.
+                </p>
+            </main>
+
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <ul>
+                    <li>Tin tức mới</li>
+                    <li>Bài viết nổi bật</li>
+                    <li>Thông báo</li>
+                    <li>Liên kết hữu ích</li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <footer class="footer" id="contact">
+            <p>© 2026 - Website Responsive bằng CSS Flexbox</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+```
