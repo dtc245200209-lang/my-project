@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục bằng Float</title>
+    <style>
+        /* Thiết lập font chữ cơ bản cho dễ nhìn */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .left-column {
+            width: 60%;
+            float: left;
+            background-color: lightblue;
+            padding: 20px;
+            box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */
+            min-height: 200px; /* Thêm chiều cao tối thiểu để dễ quan sát */
+        }
+
+        .right-column {
+            width: 38%;
+            float: right;
+            background-color: lightgreen;
+            padding: 20px;
+            box-sizing: border-box; /* Bổ sung box-sizing để đồng bộ với cột trái */
+            min-height: 200px;
+        }
+
+        /* Xử lý float (Clearfix) để container bao trọn được 2 cột bên trong */
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-column">
+            <h2>Nội dung chính</h2>
+            <p>Đây là cột bên trái chiếm 60% chiều rộng. Thuộc tính <code>float: left</code> giúp khối này bám sang lề trái của trang.</p>
+        </div>
+        <div class="right-column">
+            <h2>Sidebar</h2>
+            <p>Đây là cột bên phải chứa sidebar chiếm 38% chiều rộng. Thuộc tính <code>float: right</code> giúp khối này bám sang lề phải.</p>
+        </div>
+    </div>
+
+</body>
+</html>
