@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <style>
+        /* Sửa lỗi cú pháp của đề bài: dùng * thay vì - */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Vùng chứa 2 cột sử dụng overflow: hidden để clear float */
+        .container {
+            width: 100%;
+            overflow: hidden; 
+            margin-bottom: 30px; /* Thêm khoảng cách với hộp overflow bên dưới */
+        }
+
+        .left-column {
+            width: 50%;
+            float: left;
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .right-column {
+            width: 50%;
+            float: right;
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Khối nội dung có thanh cuộn */
+        .overflow-box {
+            width: 300px;
+            height: 100px;
+            background-color: lightcoral;
+            padding: 10px;
+            overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá 100px */
+            margin: 0 auto; /* Căn giữa hộp để dễ nhìn */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bố cục trang với float và overflow</h1>
+    
+    <div class="container">
+        <div class="left-column">Nội dung bên trái</div>
+        <div class="right-column">Nội dung bên phải</div>
+    </div>
+    
+    <div class="overflow-box">
+        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. Praesent sit amet diam eget lorem congue efficitur.
+    </div>
+</body>
+</html>
