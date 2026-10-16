@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng CSS vào HTML</title>
+    
+    <!-- PHẦN 2: Nhúng CSS sử dụng Internal-style -->
+    <!-- Viết code CSS trực tiếp bên trong thẻ <style> nằm ở phần <head> -->
+    <style>
+        .internal-heading {
+            color: blue;
+        }
+        .internal-paragraph {
+            color: green;
+        }
+    </style>
+    
+    <!-- PHẦN 3: Nhúng CSS sử dụng External-style -->
+    <!-- Liên kết tới một file CSS bên ngoài có tên là style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PHẦN 1: Nhúng CSS sử dụng Inline-style -->
+    <!-- Viết thuộc tính style="..." trực tiếp vào bên trong thẻ mở HTML -->
+    <h1 style="color: red;">Phần 1: Tiêu đề với Inline-style</h1>
+    <p style="color: orange;">Đây là đoạn văn được đổi màu bằng Inline-style. Thuộc tính được gắn trực tiếp vào thẻ p.</p>
+
+    <hr>
+
+    <!-- PHẦN 2: Hiển thị cho Internal-style -->
+    <h1 class="internal-heading">Phần 2: Tiêu đề với Internal-style</h1>
+    <p class="internal-paragraph">Đây là đoạn văn được đổi màu bằng Internal-style. Code CSS nằm gọn trên phần head của trang.</p>
+
+    <hr>
+
+    <!-- PHẦN 3: Hiển thị cho External-style -->
+    <h1 class="external-heading">Phần 3: Tiêu đề với External-style</h1>
+    <p class="external-paragraph">Đây là đoạn văn được đổi màu bằng External-style. Trình duyệt sẽ đọc màu sắc từ file style.css bên ngoài.</p>
+
+</body>
+</html>
