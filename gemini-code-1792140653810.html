@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Ngang</title>
+    <style>
+        /* Đặt phông chữ cơ bản cho trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+
+        /* Phân vùng cho trình đơn: xóa margin, padding mặc định và bỏ dấu chấm đầu dòng */
+        #menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            /* Đảm bảo khung menu bao trọn các phần tử float bên trong */
+            display: inline-block; 
+        }
+
+        /* Định nghĩa cho các phần tử danh sách (li) cấp 1 (Menu cha) */
+        #menu ul li {
+            position: relative;
+            float: left; /* Dàn hàng ngang */
+            width: 180px; 
+            height: 40px;
+            line-height: 40px; /* Căn giữa chữ theo chiều dọc */
+            text-align: center;
+        }
+
+        /* Định dạng liên kết (thẻ a) */
+        #menu ul li a {
+            text-decoration: none;
+            color: white;
+            display: block; /* Trải rộng thẻ a ra toàn bộ vùng của thẻ li */
+            font-size: 16px;
+        }
+
+        /* Hiệu ứng khi đưa chuột qua mục chọn */
+        #menu ul li a:hover {
+            background-color: red;
+        }
+
+        /* Định dạng cho danh sách con (Trình đơn thả xuống) */
+        #menu ul ul {
+            position: absolute;
+            top: 40px; /* Nằm ngay dưới menu cha (trùng với height của menu cha) */
+            left: 0;
+            visibility: hidden; /* Ẩn menu con theo mặc định */
+            background-color: #333; /* Màu nền hơi khác để dễ phân biệt */
+        }
+
+        /* Khi di chuột vào thẻ li cha, hiển thị thẻ ul con (menu thả xuống) */
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        /* Đảm bảo các mục của menu con xếp dọc (không bị float ngang) */
+        #menu ul ul li {
+            float: none; 
+            border-top: 1px solid #555; /* Đường viền mờ phân cách các menu con */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            
+            <li><a href="#">Lập trình</a>
+                <!-- Trình đơn con của phần Lập trình -->
+                <ul>
+                    <li><a href="#">C# & ASP.NET Core</a></li>
+                    <li><a href="#">Python & AI</a></li>
+                    <li><a href="#">Cơ sở dữ liệu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Sở thích</a>
+                <!-- Trình đơn con của phần Sở thích -->
+                <ul>
+                    <li><a href="#">Tử vi học</a></li>
+                    <li><a href="#">Thơ 4 chữ</a></li>
+                    <li><a href="#">Sửa chữa DIY</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
