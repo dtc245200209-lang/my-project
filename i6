@@ -1,0 +1,399 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Shopping Mall</title>
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+        }
+
+        header {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(120deg, #1686a8, #043c62);
+            overflow: hidden;
+            color: white;
+        }
+
+        .shopping-mall {
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+            font-variant: small-caps;
+        }
+
+        .shopping-mall h1 {
+            font-family: Impact, sans-serif;
+            font-size: 40px;
+            color: white;
+            letter-spacing: 0.3px;
+            text-shadow: 0 0 3px black;
+            padding-bottom: 8px;
+            border-bottom: 1px dotted white;
+            margin: 0;
+        }
+
+        .shopping-mall h5 {
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-image {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+        }
+
+        .navbar {
+            margin-bottom: 15px;
+            border-radius: 0;
+        }
+
+        .poly-cart {
+            margin-top: 5px;
+        }
+
+        .poly-cart ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-variant: small-caps;
+        }
+
+        .poly-cart .panel-heading strong {
+            font-variant: small-caps;
+            font-size: larger;
+            text-shadow: 0 0 2px darkgray;
+        }
+
+        .poly-cart img {
+            max-width: 100%;
+        }
+
+        .poly-prod {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .poly-prod .panel-body img {
+            height: 150px;
+            max-width: 95%;
+            object-fit: contain;
+        }
+
+        .poly-prod .panel {
+            height: 240px;
+        }
+
+        .poly-prod .panel-footer {
+            font-size: 17px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        footer {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .shopping-mall {
+                left: 15px;
+                bottom: 25px;
+            }
+
+            .shopping-mall h1 {
+                font-size: 27px;
+            }
+
+            .shopping-mall h5 {
+                font-size: 12px;
+                max-width: 230px;
+            }
+
+            .header-image {
+                width: 90px;
+                height: 90px;
+                right: 10px;
+                top: 10px;
+            }
+
+            header {
+                height: 180px;
+            }
+
+            .poly-prod .panel {
+                height: auto;
+                min-height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="row">
+        <div class="shopping-mall">
+            <h1>Online Shopping Mall</h1>
+            <h5>The center point of the professional programming</h5>
+        </div>
+
+        <img class="header-image"
+             src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+             alt="Shopping"
+             onerror="this.style.display='none'">
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#myNavbar">
+                    <span class="sr-only">Mở menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Shopping</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            Liên hệ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#feedback">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            Góp ý
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#help">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                            Hỏi đáp
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Tài khoản
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                            <li><a href="#">Đăng ký thành viên</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Main content and sidebar -->
+    <div class="row">
+
+        <!-- Article: products -->
+        <article class="col-sm-9">
+
+            <div class="row">
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Điện thoại Nokia</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/644/644458.png"
+                                 alt="Điện thoại Nokia">
+                        </div>
+                        <div class="panel-footer">$100.25</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Laptop</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3474/3474360.png"
+                                 alt="Laptop">
+                        </div>
+                        <div class="panel-footer">$550.00</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Máy tính để bàn</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3474/3474360.png"
+                                 alt="Máy tính">
+                        </div>
+                        <div class="panel-footer">$420.50</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Quạt máy</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/262/262569.png"
+                                 alt="Quạt máy">
+                        </div>
+                        <div class="panel-footer">$35.00</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Tivi</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+                                 alt="Tivi">
+                        </div>
+                        <div class="panel-footer">$300.00</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Tủ lạnh</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://cdn-icons-png.flaticon.com/512/619/619153.png"
+                                 alt="Tủ lạnh">
+                        </div>
+                        <div class="panel-footer">$250.75</div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="col-sm-3">
+
+            <!-- Shopping cart -->
+            <div class="poly-cart panel panel-default">
+                <div class="panel-heading">
+                    <strong>Giỏ hàng</strong>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+                                 alt="Giỏ hàng">
+                        </div>
+
+                        <div class="col-xs-7">
+                            <ul>
+                                <li>100 items</li>
+                                <li>$56.8</li>
+                                <li><a href="#">Xem giỏ hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="#" method="get">
+                        <input type="text" placeholder="Keywords"
+                               class="form-control">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <strong>Chủng Loại</strong>
+                </div>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Điện thoại di động</a>
+                    <a href="#" class="list-group-item">Máy tính xách tay</a>
+                    <a href="#" class="list-group-item">Máy tính để bàn</a>
+                    <a href="#" class="list-group-item">Quạt máy</a>
+                    <a href="#" class="list-group-item">Tivi</a>
+                    <a href="#" class="list-group-item">Tủ lạnh</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="panel panel-default">
+        <div class="panel-heading text-center">
+            <p>Online Shopping Mall &copy; 2026</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
+```
