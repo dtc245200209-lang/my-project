@@ -1,0 +1,205 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Responsive</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #444;
+            padding: 15px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav a:hover {
+            background-color: #007bff;
+        }
+
+        /* Main Content và Sidebar */
+        .main-container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 3;
+            padding: 25px;
+            background-color: #eaf3ff;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 12px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive cho điện thoại và máy tính bảng */
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 10px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .content,
+            .sidebar {
+                width: 100%;
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Website của tôi</h1>
+            <p>Thực hành xây dựng bố cục bằng CSS Flexbox</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#news">Tin tức</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <div class="main-container">
+
+            <main class="content" id="home">
+                <h2>Main Content - Nội dung chính</h2>
+
+                <p>
+                    Chào mừng bạn đến với website của tôi!
+                    Đây là khu vực hiển thị nội dung chính của trang web.
+                </p>
+
+                <p id="about">
+                    CSS Flexbox giúp sắp xếp các phần tử trên trang web
+                    một cách linh hoạt, thuận tiện và dễ dàng điều chỉnh
+                    theo kích thước màn hình.
+                </p>
+
+                <p id="news">
+                    Trên máy tính, nội dung chính nằm bên trái và Sidebar
+                    nằm bên phải. Trên điện thoại, hai khu vực sẽ được
+                    xếp theo chiều dọc.
+                </p>
+            </main>
+
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+
+                <p>Một số nội dung phụ:</p>
+
+                <ul>
+                    <li>Tin tức mới</li>
+                    <li>Bài viết nổi bật</li>
+                    <li>Thông báo</li>
+                    <li>Liên kết hữu ích</li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <footer class="footer" id="contact">
+            <p>© 2026 Website của tôi</p>
+            <p>Thực hành CSS Flexbox Responsive</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+```
