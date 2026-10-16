@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bố cục cơ bản</title>
+    <style>
+        /* 1. Cố định phông chữ cho trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef; /* Màu nền xám nhạt cho ngoài viền */
+        }
+
+        /* 2. Cố định độ rộng 960px và căn giữa màn hình */
+        #main {
+            width: 960px;
+            margin: 0 auto; 
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* 3. Vùng Header (Logo & Banner) */
+        #head {
+            height: 120px;
+            background-color: #4CAF50; /* Màu xanh lá */
+            margin-bottom: 5px;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* 4. Vùng Head-link (Menu ngang) */
+        #head-link {
+            height: 40px;
+            background-color: #333333;
+            margin-bottom: 5px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            word-spacing: 20px; /* Tạo khoảng cách giữa các chữ cho giống menu */
+        }
+
+        /* 5. Vùng Left (Cột trái) - Chú ý float: left */
+        #left {
+            width: 200px;
+            min-height: 400px;
+            float: left;
+            background-color: #2196F3; /* Màu xanh dương */
+            color: white;
+            padding: 15px;
+            box-sizing: border-box; /* Ép padding vào trong kích thước 200px */
+        }
+
+        /* 6. Vùng Content (Cột giữa) - Float trái tiếp nối */
+        #content {
+            width: 560px; /* 960 - 200(left) - 200(right) = 560 */
+            min-height: 400px;
+            float: left;
+            background-color: #ffffff;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* 7. Vùng Right (Cột phải) - Float phải */
+        #right {
+            width: 200px;
+            min-height: 400px;
+            float: right;
+            background-color: #FFC107; /* Màu vàng */
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* 8. Vùng Footer (Chân trang) - Cực kỳ quan trọng: clear: both */
+        #footer {
+            clear: both; /* Dọn sạch ảnh hưởng của float từ 3 cột trên để footer nằm dưới cùng */
+            height: 60px;
+            background-color: #607D8B;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phân vùng main chứa toàn bộ nội dung -->
+    <div id="main">
+        
+        <div id="head">
+            LOGO & BANNER
+        </div>
+        
+        <div id="head-link">
+            Home | Students | Course | About
+        </div>
+        
+        <div id="left">
+            <h3>Danh mục</h3>
+            <p>Liên kết 1</p>
+            <p>Liên kết 2</p>
+            <p>Liên kết 3</p>
+        </div>
+        
+        <div id="content">
+            <h2>Nội dung chính (Content)</h2>
+            <p>Hot news, Photo Slide, News 1...</p>
+            <p>Đây là phần hiển thị chi tiết các bài viết hoặc thông tin sản phẩm của website. Nó chiếm không gian rộng nhất (560px) ở giữa trang.</p>
+        </div>
+        
+        <div id="right">
+            <h3>Bên phải</h3>
+            <p>Lịch</p>
+            <p>Biểu đồ</p>
+            <p>Bản đồ</p>
+        </div>
+        
+        <div id="footer">
+            Bản quyền © 2026 - Thông tin chủ sở hữu
+        </div>
+        
+    </div>
+
+</body>
+</html>
