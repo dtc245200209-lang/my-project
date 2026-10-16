@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout với thẻ HTML5</title>
+    <style>
+        /* Thiết lập cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* 1. Header (Đầu trang) */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        /* 2. Nav (Thanh điều hướng) */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Container bao bọc Section và Aside */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
+        /* 3. Section (Khu vực nội dung chính) */
+        section {
+            flex: 3; /* Chiếm 3 phần chiều rộng */
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        /* 4. Article (Các bài viết độc lập trong nội dung chính) */
+        article {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        /* 5. Aside (Cột bên/Sidebar) */
+        aside {
+            flex: 1; /* Chiếm 1 phần chiều rộng */
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        aside h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 6. Footer (Chân trang) */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tiêu đề Website</h1>
+        <p>Sử dụng các thẻ ngữ nghĩa HTML5 (Semantic Tags)</p>
+    </header>
+
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>Nội dung chính (Section)</h2>
+            
+            <article>
+                <h3>Bài viết số 1 (Article)</h3>
+                <p>Thẻ article đại diện cho một phần nội dung độc lập, có thể tự tái sử dụng và phân phối. Ví dụ như một bài đăng diễn đàn, bài viết tạp chí hoặc bài đăng blog.</p>
+            </article>
+
+            <article>
+                <h3>Bài viết số 2 (Article)</h3>
+                <p>Việc sử dụng các thẻ HTML5 này giúp các công cụ tìm kiếm (Google) và các thiết bị đọc màn hình hiểu rõ cấu trúc trang web của bạn hơn là việc lạm dụng thẻ div.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Cột bên (Aside)</h3>
+            <p>Nội dung ở đây thường liên quan gián tiếp đến nội dung chính (ví dụ: danh mục, quảng cáo, liên kết hữu ích).</p>
+            <ul>
+                <li>Danh mục 1</li>
+                <li>Danh mục 2</li>
+                <li>Danh mục 3</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 - Demo Layout HTML5</p>
+    </footer>
+
+</body>
+</html>
