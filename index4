@@ -1,0 +1,84 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS - flex-flow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        .container-1,
+        .container-2 {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: #f1f1f1;
+            border: 2px solid #333;
+            margin-bottom: 30px;
+        }
+
+        .container-1 {
+            flex-flow: row nowrap;
+        }
+
+        .container-2 {
+            flex-flow: row-reverse nowrap;
+        }
+
+        .container-1 > div,
+        .container-2 > div {
+            background-color: #007bff;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .container-2 > div {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>THỰC HÀNH CSS: FLEX-FLOW</h1>
+
+    <h2>Ví dụ 1: flex-flow: row nowrap</h2>
+    <p>Các item nằm trên cùng một hàng, theo thứ tự từ trái sang phải và không xuống dòng.</p>
+
+    <div class="container-1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>Ví dụ 2: flex-flow: row-reverse nowrap</h2>
+    <p>Các item nằm trên cùng một hàng nhưng đảo ngược thứ tự hiển thị từ phải sang trái.</p>
+
+    <div class="container-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+</html>
+```
